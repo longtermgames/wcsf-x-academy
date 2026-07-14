@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Футболка WCSF X",
+    "desc": "Хлопок 190 г/м², принт на груди и спине",
+    "price": "1 200",
+    "image": "tee.svg",
+    "whatsapp": "996700000000",
+    "message": "Хочу заказать футболку WCSF X"
+  },
+  {
+    "name": "Худи Concrete",
+    "desc": "Плотный флис, карман-кенгуру, лого на капюшоне",
+    "price": "2 800",
+    "image": "hoodie.svg",
+    "whatsapp": "996700000000",
+    "message": "Хочу заказать худи Concrete"
+  },
+  {
+    "name": "Кепка Iron Bar",
+    "desc": "Регулируемый ремешок, вышивка спереди",
+    "price": "900",
+    "image": "cap.svg",
+    "whatsapp": "996700000000",
+    "message": "Хочу заказать кепку Iron Bar"
+  },
+  {
+    "name": "Шоппер Team Bag",
+    "desc": "Плотный хлопок, длинные ручки под плечо",
+    "price": "600",
+    "image": "bag.svg",
+    "whatsapp": "996700000000",
+    "message": "Хочу заказать шоппер Team Bag"
+  },
+  {
+    "name": "Wrist Wraps",
+    "desc": "Кистевые бинты для турника и брусьев, длина 40 см",
+    "price": "450",
+    "image": "wristwraps.svg",
+    "whatsapp": "996700000000",
+    "message": "Хочу заказать Wrist Wraps"
+  }
+]

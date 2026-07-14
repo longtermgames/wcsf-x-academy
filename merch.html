@@ -44,80 +44,10 @@
 
   <section>
     <div class="wrap">
-      <div class="merch-grid reveal">
-
-        <div class="merch-card">
-          <div class="merch-media">
-            <img class="tee" src="assets/images/tee.svg" alt="Футболка WCSF X" loading="lazy" />
-          </div>
-          <div class="merch-body">
-            <span class="merch-name">Футболка WCSF X</span>
-            <p class="merch-desc">Хлопок 190 г/м², принт на груди и спине</p>
-            <div class="merch-foot">
-              <span class="merch-price">1 200 <small>сом</small></span>
-              <a class="btn btn-solid btn-sm" href="https://wa.me/996700000000?text=Здравствуйте!%20Хочу%20заказать%20футболку%20WCSF%20X" target="_blank" rel="noopener">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="merch-card">
-          <div class="merch-media">
-            <img class="tee" src="assets/images/hoodie.svg" alt="Худи Concrete" loading="lazy" />
-          </div>
-          <div class="merch-body">
-            <span class="merch-name">Худи Concrete</span>
-            <p class="merch-desc">Плотный флис, карман-кенгуру, лого на капюшоне</p>
-            <div class="merch-foot">
-              <span class="merch-price">2 800 <small>сом</small></span>
-              <a class="btn btn-solid btn-sm" href="https://wa.me/996700000000?text=Здравствуйте!%20Хочу%20заказать%20худи%20Concrete" target="_blank" rel="noopener">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="merch-card">
-          <div class="merch-media">
-            <img class="tee" src="assets/images/cap.svg" alt="Кепка Iron Bar" loading="lazy" />
-          </div>
-          <div class="merch-body">
-            <span class="merch-name">Кепка Iron Bar</span>
-            <p class="merch-desc">Регулируемый ремешок, вышивка спереди</p>
-            <div class="merch-foot">
-              <span class="merch-price">900 <small>сом</small></span>
-              <a class="btn btn-solid btn-sm" href="https://wa.me/996700000000?text=Здравствуйте!%20Хочу%20заказать%20кепку%20Iron%20Bar" target="_blank" rel="noopener">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="merch-card">
-          <div class="merch-media">
-            <img class="tee" src="assets/images/bag.svg" alt="Шоппер Team Bag" loading="lazy" />
-          </div>
-          <div class="merch-body">
-            <span class="merch-name">Шоппер Team Bag</span>
-            <p class="merch-desc">Плотный хлопок, длинные ручки под плечо</p>
-            <div class="merch-foot">
-              <span class="merch-price">600 <small>сом</small></span>
-              <a class="btn btn-solid btn-sm" href="https://wa.me/996700000000?text=Здравствуйте!%20Хочу%20заказать%20шоппер%20Team%20Bag" target="_blank" rel="noopener">Заказать</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="merch-card">
-          <div class="merch-media">
-            <img class="tee" src="assets/images/wristwraps.svg" alt="Wrist Wraps WCSF X" loading="lazy" />
-          </div>
-          <div class="merch-body">
-            <span class="merch-name">Wrist Wraps</span>
-            <p class="merch-desc">Кистевые бинты для турника и брусьев, длина 40 см</p>
-            <div class="merch-foot">
-              <span class="merch-price">450 <small>сом</small></span>
-              <a class="btn btn-solid btn-sm" href="https://wa.me/996700000000?text=Здравствуйте!%20Хочу%20заказать%20Wrist%20Wraps" target="_blank" rel="noopener">Заказать</a>
-            </div>
-          </div>
-        </div>
-
+      <div class="merch-grid reveal" id="merch-grid">
+        <p class="doc-note">Загружаем товары…</p>
       </div>
-      <p class="doc-note" style="margin-top:24px">На реальном сайте товары, фото и цены сможете сами добавлять и менять — без участия программиста.</p>
+      <p class="doc-note" style="margin-top:24px">Товары, фото и цены команда добавляет сама через файл <code>assets/products.json</code> — без участия программиста. Инструкция: <a href="HOW-TO.md">HOW-TO.md</a>.</p>
     </div>
   </section>
 
@@ -168,5 +98,6 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script src="assets/merch-render.js"></script>
 </body>
 </html>
