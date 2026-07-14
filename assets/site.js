@@ -11,7 +11,7 @@ document.querySelectorAll('.reveal').forEach(function (el) {
 });
 
 var burger = document.querySelector('.burger');
-var nav = document.querySelector('nav.primary');
+var nav = document.querySelector('.primary');
 if (burger) {
   burger.addEventListener('click', function () {
     var open = nav.style.display === 'flex';
