@@ -493,7 +493,10 @@ section { padding-block: clamp(56px, 8vw, 100px); }
   border-bottom: 1px solid var(--border);
 }
 .merch-media .tee {
-  width: 62%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .merch-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .merch-name { font-size: 1rem; font-weight: 700; text-transform: uppercase; font-family: 'Oswald', sans-serif; letter-spacing: 0.01em; }

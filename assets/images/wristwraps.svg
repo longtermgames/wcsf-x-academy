@@ -1,0 +1,9 @@
+<svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="260" fill="#17140D"/>
+  <g transform="translate(120,130) rotate(-18)">
+    <rect x="-100" y="-16" width="200" height="32" rx="16" fill="#F2EDE1"/>
+    <rect x="-100" y="-16" width="200" height="32" rx="16" fill="none" stroke="#C43B23" stroke-width="3" stroke-dasharray="2 10"/>
+    <rect x="70" y="-26" width="34" height="52" rx="6" fill="#C43B23"/>
+  </g>
+  <text x="120" y="210" font-family="Oswald, sans-serif" font-weight="700" font-size="20" fill="#C43B23" text-anchor="middle">WCSF X</text>
+</svg>

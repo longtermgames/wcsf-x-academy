@@ -1,0 +1,6 @@
+<svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="260" fill="#2E2411"/>
+  <path d="M56 48 L56 236 L184 236 L184 48 Z" fill="#F2EDE1"/>
+  <path d="M84 48 L84 16 Q120 -4 156 16 L156 48" stroke="#5B5644" stroke-width="6" fill="none"/>
+  <text x="120" y="152" font-family="Oswald, sans-serif" font-weight="700" font-size="26" fill="#A97A22" text-anchor="middle">WCSF X</text>
+</svg>

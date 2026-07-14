@@ -1,0 +1,6 @@
+<svg viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="200" fill="#17140D"/>
+  <path d="M40 110 Q40 44 120 44 Q200 44 200 110 L200 120 L40 120 Z" fill="#F2EDE1"/>
+  <path d="M28 116 Q120 92 212 116 L212 132 Q120 108 28 132 Z" fill="#C43B23"/>
+  <text x="120" y="96" font-family="Oswald, sans-serif" font-weight="700" font-size="22" fill="#C43B23" text-anchor="middle">X</text>
+</svg>

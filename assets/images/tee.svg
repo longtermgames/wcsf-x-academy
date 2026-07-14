@@ -1,0 +1,6 @@
+<svg viewBox="0 0 240 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="260" fill="#17140D"/>
+  <path d="M60 20 L96 8 L120 28 L144 8 L180 20 L212 56 L184 84 L168 68 L168 244 L72 244 L72 68 L56 84 L28 56 Z" fill="#F2EDE1"/>
+  <text x="120" y="144" font-family="Oswald, sans-serif" font-weight="700" font-size="30" fill="#C43B23" text-anchor="middle">WCSF</text>
+  <text x="120" y="176" font-family="Oswald, sans-serif" font-weight="600" font-size="16" fill="#5B5644" text-anchor="middle" letter-spacing="4">BISHKEK</text>
+</svg>
