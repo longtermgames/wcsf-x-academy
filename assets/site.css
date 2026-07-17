@@ -515,6 +515,23 @@ section { padding-block: clamp(56px, 8vw, 100px); }
 }
 .merch-price small { font-size: 0.65rem; color: var(--ink-soft); font-family: 'Manrope', sans-serif; text-transform: uppercase; }
 
+.payment-card {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-card);
+  max-width: 480px;
+}
+.payment-qr { width: 96px; height: 96px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }
+.payment-info { display: flex; flex-direction: column; gap: 4px; }
+.payment-provider { font-weight: 700; text-transform: uppercase; font-family: 'Oswald', sans-serif; letter-spacing: 0.01em; }
+.payment-phone { font-size: 0.9rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.payment-note { font-size: 0.8rem; color: var(--ink-soft); }
+
 /* ===== CTA band ===== */
 .cta-band {
   background: var(--ink);

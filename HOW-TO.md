@@ -93,6 +93,28 @@
 
 ---
 
+## Включить оплату по QR (MBank)
+
+1. В приложении MBank откройте раздел приёма платежей и сохраните свой QR-код как картинку
+2. Загрузите её в [assets/images](https://github.com/longtermgames/wcsf-x-academy/tree/main/assets/images) (**Add file → Upload files**), например `mbank-qr.png`
+3. Откройте [assets/payment.json](https://github.com/longtermgames/wcsf-x-academy/blob/main/assets/payment.json), карандаш → **Edit**, и впишите:
+
+```json
+{
+  "enabled": true,
+  "provider": "MBank",
+  "qrImage": "mbank-qr.png",
+  "phone": "0700 00 00 00",
+  "note": "Отсканируйте QR в приложении MBank или переведите на номер, затем пришлите скрин оплаты в WhatsApp"
+}
+```
+
+   `"qrImage"` должно точно совпадать с именем файла из шага 2. Пока `"enabled": false` или `"qrImage"` пустой — блок оплаты на сайте не показывается.
+
+4. **Commit changes**. Блок с QR появится на странице /merch.html
+
+---
+
 ## Если что-то сломалось
 
 Если после Commit changes сайт показывает "Не получилось загрузить список…" — где-то пропущена запятая или скобка в JSON. Откатить: откройте [историю коммитов](https://github.com/longtermgames/wcsf-x-academy/commits/main) нужного файла, откройте предыдущую версию, скопируйте её содержимое обратно. Либо просто напишите об этом — поправим.

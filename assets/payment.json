@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "provider": "MBank",
+  "qrImage": "",
+  "phone": "",
+  "note": "Отсканируйте QR в приложении MBank или переведите на номер, затем пришлите скрин оплаты в WhatsApp"
+}

@@ -1,3 +1,9 @@
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
 fetch('assets/documents.json')
   .then(function (res) { return res.json(); })
   .then(function (groups) {
@@ -6,14 +12,14 @@ fetch('assets/documents.json')
     root.innerHTML = groups.map(function (group) {
       var rows = group.items.map(function (doc) {
         var hasFile = !!doc.file;
-        var href = hasFile ? 'assets/docs/' + doc.file : '#';
-        var meta = hasFile ? (doc.updated ? 'Обновлено ' + doc.updated : '') + (doc.size ? ' · ' + doc.size : '') : '—';
+        var href = hasFile ? 'assets/docs/' + encodeURIComponent(doc.file) : '#';
+        var meta = hasFile ? (doc.updated ? 'Обновлено ' + escapeHtml(doc.updated) : '') + (doc.size ? ' · ' + escapeHtml(doc.size) : '') : '—';
         return (
           '<a class="doc-row" href="' + href + '"' + (hasFile ? ' download' : '') + '>' +
             '<span class="doc-icon">PDF</span>' +
             '<span>' +
-              '<span class="doc-title">' + doc.title + '</span>' +
-              '<span class="doc-desc">' + doc.desc + '</span>' +
+              '<span class="doc-title">' + escapeHtml(doc.title) + '</span>' +
+              '<span class="doc-desc">' + escapeHtml(doc.desc) + '</span>' +
             '</span>' +
             '<span class="doc-meta">' + meta + '</span>' +
             '<span class="doc-dl">↓</span>' +
@@ -21,7 +27,7 @@ fetch('assets/documents.json')
         );
       }).join('');
       return (
-        '<h2 class="doc-group-label">' + group.group + '</h2>' +
+        '<h2 class="doc-group-label">' + escapeHtml(group.group) + '</h2>' +
         '<div class="doc-board reveal">' + rows + '</div>'
       );
     }).join('');

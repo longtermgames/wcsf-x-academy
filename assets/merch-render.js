@@ -1,3 +1,9 @@
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
 fetch('assets/products.json')
   .then(function (res) { return res.json(); })
   .then(function (products) {
@@ -8,14 +14,14 @@ fetch('assets/products.json')
       return (
         '<div class="merch-card">' +
           '<div class="merch-media">' +
-            '<img class="tee" src="assets/images/' + p.image + '" alt="' + p.name + '" loading="lazy" />' +
+            '<img class="tee" src="assets/images/' + encodeURIComponent(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />' +
           '</div>' +
           '<div class="merch-body">' +
-            '<span class="merch-name">' + p.name + '</span>' +
-            '<p class="merch-desc">' + p.desc + '</p>' +
+            '<span class="merch-name">' + escapeHtml(p.name) + '</span>' +
+            '<p class="merch-desc">' + escapeHtml(p.desc) + '</p>' +
             '<div class="merch-foot">' +
-              '<span class="merch-price">' + p.price + ' <small>сом</small></span>' +
-              '<a class="btn btn-solid btn-sm" href="https://wa.me/' + p.whatsapp + '?text=' + text + '" target="_blank" rel="noopener">Заказать</a>' +
+              '<span class="merch-price">' + escapeHtml(p.price) + ' <small>сом</small></span>' +
+              '<a class="btn btn-solid btn-sm" href="https://wa.me/' + encodeURIComponent(p.whatsapp) + '?text=' + text + '" target="_blank" rel="noopener">Заказать</a>' +
             '</div>' +
           '</div>' +
         '</div>'
