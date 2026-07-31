@@ -28,7 +28,7 @@ fetch('assets/documents.json')
       }).join('');
       return (
         '<h2 class="doc-group-label">' + escapeHtml(group.group) + '</h2>' +
-        '<div class="doc-board reveal">' + rows + '</div>'
+        '<div class="doc-board">' + rows + '</div>'
       );
     }).join('');
   })
