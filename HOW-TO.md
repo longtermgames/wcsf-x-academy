@@ -1,6 +1,14 @@
 # Как обновлять сайт без программиста
 
-Всё делается прямо в браузере на github.com, в репозитории [longtermgames/wcsf-x-academy](https://github.com/longtermgames/wcsf-x-academy).
+## Способ 1 (проще): админка
+
+Зайдите на **wcsfxacademy.com/admin** (или `longtermgames.github.io/wcsf-x-academy/admin`), войдите через свой GitHub-аккаунт — откроется форма: список товаров и список документов, без единой строчки кода. Добавили/поправили запись → кнопка "Publish" → через 1-2 минуты изменения на сайте.
+
+Если аккаунта на github.com нет — попросите того, кто настраивал сайт, добавить вас соавтором (Settings → Collaborators в репозитории).
+
+## Способ 2: вручную через файлы
+
+Всё делается прямо в браузере на github.com, в репозитории [longtermgames/wcsf-x-academy](https://github.com/longtermgames/wcsf-x-academy). Полезно, если админка недоступна или нужно что-то нестандартное.
 
 ---
 

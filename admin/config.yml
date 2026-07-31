@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: longtermgames/wcsf-x-academy
+  branch: main
+  base_url: https://wcsf-x-academy-cms-auth.netlify.app
+  auth_endpoint: auth
+
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+collections:
+  - name: "products"
+    label: "Мерч"
+    files:
+      - name: "products"
+        label: "Товары"
+        file: "assets/products.json"
+        fields:
+          - name: "products"
+            label: "Товары"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}} сом"
+            fields:
+              - { label: "Название", name: "name", widget: "string" }
+              - { label: "Описание", name: "desc", widget: "string" }
+              - { label: "Цена (сом, без слова)", name: "price", widget: "string" }
+              - { label: "Фото", name: "image", widget: "image", media_folder: "assets/images", public_folder: "assets/images" }
+              - { label: "WhatsApp номер (цифрами, без +)", name: "whatsapp", widget: "string", default: "996700000000" }
+              - { label: "Текст сообщения при заказе в WhatsApp", name: "message", widget: "string", required: false }
+
+  - name: "documents"
+    label: "Документы"
+    files:
+      - name: "documents"
+        label: "Список документов"
+        file: "assets/documents.json"
+        fields:
+          - name: "groups"
+            label: "Группы документов"
+            widget: "list"
+            summary: "{{fields.group}}"
+            fields:
+              - { label: "Название группы", name: "group", widget: "string" }
+              - name: "items"
+                label: "Документы в группе"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Заголовок", name: "title", widget: "string" }
+                  - { label: "Описание", name: "desc", widget: "string" }
+                  - { label: "Файл (PDF)", name: "file", widget: "file", media_folder: "assets/docs", public_folder: "assets/docs", required: false }
+                  - { label: "Обновлено (напр. 03.2026)", name: "updated", widget: "string", required: false }
+                  - { label: "Размер файла (напр. 240 КБ)", name: "size", widget: "string", required: false }

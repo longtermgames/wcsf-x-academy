@@ -6,13 +6,14 @@ function escapeHtml(str) {
 
 fetch('assets/documents.json')
   .then(function (res) { return res.json(); })
-  .then(function (groups) {
+  .then(function (data) {
+    var groups = data.groups || [];
     var root = document.getElementById('doc-groups');
     if (!root) return;
     root.innerHTML = groups.map(function (group) {
       var rows = group.items.map(function (doc) {
         var hasFile = !!doc.file;
-        var href = hasFile ? 'assets/docs/' + encodeURIComponent(doc.file) : '#';
+        var href = hasFile ? escapeHtml(doc.file) : '#';
         var meta = hasFile ? (doc.updated ? 'Обновлено ' + escapeHtml(doc.updated) : '') + (doc.size ? ' · ' + escapeHtml(doc.size) : '') : '—';
         return (
           '<a class="doc-row" href="' + href + '"' + (hasFile ? ' download' : '') + '>' +

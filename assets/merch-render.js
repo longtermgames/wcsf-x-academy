@@ -6,7 +6,8 @@ function escapeHtml(str) {
 
 fetch('assets/products.json')
   .then(function (res) { return res.json(); })
-  .then(function (products) {
+  .then(function (data) {
+    var products = data.products || [];
     var grid = document.getElementById('merch-grid');
     if (!grid) return;
     grid.innerHTML = products.map(function (p) {
@@ -14,7 +15,7 @@ fetch('assets/products.json')
       return (
         '<div class="merch-card">' +
           '<div class="merch-media">' +
-            '<img class="tee" src="assets/images/' + encodeURIComponent(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />' +
+            '<img class="tee" src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.name) + '" loading="lazy" />' +
           '</div>' +
           '<div class="merch-body">' +
             '<span class="merch-name">' + escapeHtml(p.name) + '</span>' +
