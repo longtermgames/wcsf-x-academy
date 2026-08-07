@@ -751,6 +751,76 @@ footer.site {
   margin-top: 16px;
 }
 
+.event-action { padding: 16px 22px 22px; }
+
+/* ===== Register modal ===== */
+.register-overlay {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, #000 60%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 100;
+}
+.register-overlay.is-open { opacity: 1; pointer-events: auto; }
+.register-modal {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px 26px;
+  width: 100%;
+  max-width: 400px;
+}
+.register-modal h3 { font-size: 1.15rem; }
+.register-discipline-label {
+  margin-top: 6px;
+  color: var(--gold);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.register-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.register-close:hover { color: var(--accent); }
+#register-form { margin-top: 18px; display: flex; flex-direction: column; gap: 14px; }
+#register-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+#register-form input {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.92rem;
+  padding: 10px 12px;
+  border-radius: 3px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--ink);
+}
+#register-form input:focus { outline: none; border-color: var(--accent); }
+.register-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.register-status { font-size: 0.82rem; min-height: 1.2em; }
+.register-status.is-success { color: var(--accent); }
+.register-status.is-error { color: var(--accent); }
+
 /* ===== Partner strip ===== */
 .partner-strip {
   border: 1px dashed var(--border-strong);

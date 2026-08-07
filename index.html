@@ -138,22 +138,40 @@
           <h3>BMX Contest Bishkek</h3>
           <p>Соревнования по флэтленду и стрит-катанию, категории юниоры / про.</p>
           <div class="event-meta"><span>Скейт-парк, Бишкек</span><span>ежегодно, лето</span></div>
+          <div class="event-action"><button type="button" class="btn btn-ghost btn-sm btn-block js-register-open" data-discipline="bmx">Записаться</button></div>
         </div>
         <div class="event-card">
           <div class="event-top"><span class="event-date">Баттл</span></div>
           <h3>Street Workout Battle</h3>
           <p>Баттл по трюковой и силовой категориям среди клубов со всего Кыргызстана.</p>
           <div class="event-meta"><span>Городская площадка</span><span>2 раза в год</span></div>
+          <div class="event-action"><button type="button" class="btn btn-ghost btn-sm btn-block js-register-open" data-discipline="workout">Записаться</button></div>
         </div>
         <div class="event-card">
           <div class="event-top"><span class="event-date">Турнир</span></div>
           <h3>Батут-турнир</h3>
           <p>Соревнования по прыжкам на батуте среди юниоров и взрослых категорий.</p>
           <div class="event-meta"><span>Спортивный комплекс</span><span>ежегодно</span></div>
+          <div class="event-action"><button type="button" class="btn btn-ghost btn-sm btn-block js-register-open" data-discipline="trampoline">Записаться</button></div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="register-overlay" id="register-overlay">
+    <div class="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-title">
+      <button type="button" class="register-close" id="register-close" aria-label="Закрыть">&times;</button>
+      <h3 id="register-title">Запись на соревнования</h3>
+      <p class="register-discipline-label" id="register-discipline-label"></p>
+      <form id="register-form">
+        <label>Имя и фамилия<input type="text" name="full_name" required autocomplete="name"></label>
+        <label>Телефон (WhatsApp)<input type="tel" name="phone" required autocomplete="tel" placeholder="+996 700 00 00 00"></label>
+        <input type="text" name="website" class="register-honeypot" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn btn-solid btn-block">Отправить заявку</button>
+        <p class="register-status" id="register-status" role="status"></p>
+      </form>
+    </div>
+  </div>
 
   <section class="alt-bg">
     <div class="wrap">
@@ -245,5 +263,6 @@
 </footer>
 
 <script src="assets/site.js"></script>
+<script src="assets/register-render.js"></script>
 </body>
 </html>
