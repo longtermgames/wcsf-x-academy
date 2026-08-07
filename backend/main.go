@@ -40,6 +40,7 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
+	mux.HandleFunc("GET /{$}", srv.handleHealth)
 	mux.HandleFunc("GET /api/health", srv.handleHealth)
 	mux.HandleFunc("POST /api/register", srv.handleRegister)
 	mux.HandleFunc("OPTIONS /api/register", srv.handleOptions)
